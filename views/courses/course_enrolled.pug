@@ -1,0 +1,19 @@
+include index
+.jumbotron
+    if usersEnrolled.length > 0
+        div
+            each course in usersEnrolled
+                <br/>
+                ul(class="list-group")
+                    li(class="list-group-item active")= course.nombre
+                    if course.enrolled.length > 0
+                        each student in course.enrolled
+                            li(class="list-group-item")
+                                p= student.nombre
+                                a(href=`/users/delete/${student.id}` class="btn btn-primary") Eliminar 
+                    else
+                        li(class="list-group-item")
+                            h3 Aun no hay estudiantes inscritos en este curso  
+                            a(href=`/courses/info/${course.id}` class="btn btn-primary") Agrega un estudiante
+    else
+        h3 Aun no hay Cursos

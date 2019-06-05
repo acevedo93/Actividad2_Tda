@@ -1,0 +1,19 @@
+include index
+.main.container
+    .row
+    .col-md-6.col-md-offset-3
+        h1.display-4.m-b-2 Nuevo Usuario
+        form(method='POST' action=`/users/register`)
+            div.form-group
+                label(for='name') Nombre:
+                input#name.form-control(type='text', placeholder='Ingrese su nombre' name='nombre')
+            div.form-group
+                label(for='id') Correo Electronico:
+                input#id.form-control(type='text', placeholder='Ingrese un correo electronico' name='email')
+            div.form-group
+                label(for='description') cedula:
+                input#description.form-control(type='text', placeholder='Ingresa la cedula' name='id')
+            div.form-group
+                label(for='description') telefono:
+                input#description.form-control(type='text', placeholder='Ingresa el telefono' name='telefono')
+            button.btn.btn-primary(type='submit') Registrarse

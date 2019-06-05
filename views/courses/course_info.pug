@@ -1,0 +1,27 @@
+include index
+.container
+    .jumbotron
+        ul(class="list-group")
+            li(class="list-group-item active")= courseData.nombre
+            li(class="list-group-item ")= courseData.descripcion
+            li(class="list-group-item ")= courseData.modalidad
+            li(class="list-group-item ")= courseData.intensidadHoraria
+            <br/>
+        h2 Realizar inscripcion.
+        p LLena los datos 
+        form(method='POST' action=`/users/inscription/${courseData.id}`)
+            div.form-group
+                label(for='name') Nombre:
+                input#name.form-control(type='text', required placeholder='Ingrese su nombre' name='nombre')
+            div.form-group
+                label(for='id') Correo Electronico:
+                input#id.form-control(type='text', required placeholder='Ingrese su Correo electronico' name='email')
+            div.form-group
+                label(for='description') cedula:
+                input#description.form-control(type='number', required placeholder='Ingresa su cedula' name='id')
+            div.form-group
+                label(for='description') telefono:
+                input#description.form-control(type='number', required placeholder='Ingresa su telefono' name='telefono')
+            button.btn.btn-primary(type='submit') Realizar Inscripcion
+
+    

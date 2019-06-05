@@ -1,0 +1,31 @@
+include index
+.container
+    .jumbotron
+        h1 Lista de cursos disponibles
+        .alert Para Realizar la inscripcion a un curso haga click en "mas informacion..."
+    .jumbotron
+        if coursesData.length > 0
+            .table-responsive
+                table(class="table table-dark")
+                    thead
+                        tr
+                            th Nombre
+                            th Descripcion
+                            th Valor
+                            th Estado
+                    tbody
+                        each course in coursesData
+                            tr
+                                td=course.nombre
+                                td=course.descripcion
+                                td=course.valor
+                                if !edit
+                                    td
+                                        a(href=`/courses/info/${course.id}` class="btn btn-primary") Mas informacion
+                                else
+                                    td
+                                        a(href=`/courses/edit/${course.id}` class="btn btn-primary") Editar curso
+        else
+            p no hay ningun Curso
+                a(href="/courses/new")  Agregar curso
+

@@ -1,0 +1,20 @@
+{
+  "name": "actividad_2",
+  "version": "1.0.0",
+  "description": "atcividad 2 curso nodejs tda",
+  "main": "index.js",
+  "scripts": {
+    "start" : "node index",
+    "dev" : "nodemon index"
+  },
+  "author": "daj David Acevedo",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "bootstrap": "^4.3.1",
+    "express": "^4.16.4",
+    "morgan": "^1.9.1",
+    "nodemon": "^1.19.0",
+    "pug": "^2.0.3"
+  }
+}

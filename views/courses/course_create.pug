@@ -1,0 +1,27 @@
+include index
+.main.container
+    .row
+    .col-md-6.col-md-offset-3
+        h1.display-4.m-b-2 Nuevo Curso
+        form(method='POST' action='/courses/new')
+            div.form-group
+                label(for='name') Nombre del curso:
+                input#name.form-control(type='text', required placeholder='Ingrese el nombre del curso' name='nombre')
+            div.form-group
+                label(for='id') id:
+                input#id.form-control(type='number', required placeholder='Ingrese un Id numerico para el curso' name='id')
+            div.form-group
+                label(for='description') Descripcion:
+                input#description.form-control(type='text', required placeholder='Ingresa una descripcion' name='descripcion')
+            div.form-group
+                label(for='description') Valor:
+                input#description.form-control(type='text', required placeholder='Ingresa el precio' name='valor')
+            div.form-group
+                label(for='Modalidad') Modalidad:
+                select#pw.form-control(type='password' name='modalidad')
+                    option(value="virtual") Virtual
+                    option(value="presencial") Presencial
+            div.form-group
+                label(for='IntensidadHoraria') Intensidad Horaria
+                input#IntensidadHoraria.form-control(type='number' placeholder="Ingresa la intensidad horaria en hrs" name='intensidadHoraria')
+            button.btn.btn-primary(type='submit') Crear Curso
