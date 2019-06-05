@@ -50,12 +50,11 @@ router.get('/delete/:id', async (req, res, next ) => {
     try {
         const { id: studentToDelete } = req.params;
         const deletedStudent= await userServices.delete(studentToDelete);
-        console.log(deletedStudent);
         if (deletedStudent) {
             res.redirect('/courses')
         }
     } catch (error) {
-        console.log(error);
+        //
     }
 })
 
