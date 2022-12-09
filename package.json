@@ -10,9 +10,9 @@
   "author": "daj David Acevedo",
   "license": "MIT",
   "dependencies": {
-    "body-parser": "^1.19.0",
+    "body-parser": "^1.20.1",
     "bootstrap": "^4.3.1",
-    "express": "^4.16.4",
+    "express": "^4.18.2",
     "morgan": "^1.9.1",
     "nodemon": "^1.19.0",
     "pug": "^2.0.3"
